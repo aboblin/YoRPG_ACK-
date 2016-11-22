@@ -1,7 +1,7 @@
 // Team ACK!! -- Brian Kwong, Elaina Chung, Adrian Boylan
 // APCS1 pd1
-// HW32 -- Ye Olde Role Playing Game, Expanded
-// 2016-11-20
+// HW34 -- Ye Olde Role Playing Game, Unchained 
+// 2016-11-22
 
 public abstract class Character
 {
