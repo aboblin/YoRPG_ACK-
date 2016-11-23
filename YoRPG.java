@@ -148,6 +148,9 @@ public class YoRPG
 		}
 		catch ( IOException e ) { }
 
+		System.out.println( "\n" + pat.getName() + " has " + pat.getHP() + "HP." );
+		System.out.println( "\n" + "Ye Olde Monster has " + smaug.getHP() + "HP." );
+
 		if ( i == 2 )
 		    pat.specialize();
 		else

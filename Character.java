@@ -24,6 +24,11 @@ public abstract class Character
     {
         return name;
     }
+
+    public int getHP()
+    {
+	return HP;
+    }
     
     //returns defense attribute
     public int getDefense()
