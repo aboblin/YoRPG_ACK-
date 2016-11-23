@@ -15,6 +15,26 @@ public class Mage extends Character
 	dmg = 0.7;
     }
 
+     //def is decreased and dmg is increased, counter idea credits given to Ishtiaque Mahdi!
+    public void specialize()
+    {
+	def -= 300;
+	dmg += 0.8;
+	counter += 1;
+    }
+
+    //def and dmg reset
+    public void normalize()
+    {
+	def += 300*counter;
+	dmg -= 0.8*counter;
+    }
+
+    public String about()
+    {
+	return "Mage Class:\n" + "Name: " + name + "\n HP: " + HP + "\n Strength: " + str + "\n Defense: " + def + "\n Attack Rating: " + dmg;
+    }
+    
     public String toString()
     {
 	return "Mage Class:\n" + about();

@@ -15,10 +15,27 @@ public class Rouge extends Character
 	dmg = 0.6;
     }
 
-    public String toString()
+     //def is decreased and dmg is increased, counter idea credits given to Ishtiaque Mahdi!
+    public void specialize()
     {
-	return "Rouge Class:\n" + about();
-    } 
+	def -= 150;
+	dmg += 0.6;
+	counter += 1;
+    }
+
+    //def and dmg reset
+    public void normalize()
+    {
+	def += 150*counter;
+	dmg -= 0.6*counter;
+    }
+
+    //about
+    //couldn't override the about() in Character if it's static
+    public String about()
+    {
+	return "Rouge Class:\n" + "Name: " + name + "\n HP: " + HP + "\n Strength: " + str + "\n Defense: " + def + "\n Attack Rating: " + dmg;
+    }
 
 
 }

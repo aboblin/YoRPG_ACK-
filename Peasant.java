@@ -14,11 +14,27 @@ public class Peasant extends Character
 	def = 100;
 	dmg = 0.2;
     }
-
-    public String toString()
+     //def is decreased and dmg is increased, counter idea credits given to Ishtiaque Mahdi!
+    public void specialize()
     {
-	return "Peasant Class:\n" + about();
-    } 
+	def -= 100;
+	dmg += 1;
+	counter += 1;
+    }
+
+    //def and dmg reset
+    public void normalize()
+    {
+	def += 100*counter;
+	dmg -= 1*counter;
+    }
+
+    //about
+    //couldn't override the about() in Character if it's static
+    public String about()
+    {
+	return "Peasant Class:\n" + "Name: " + name + "\n HP: " + HP + "\n Strength: " + str + "\n Defense: " + def + "\n Attack Rating: " + dmg;
+    }
 
 
 }

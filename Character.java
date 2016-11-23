@@ -6,12 +6,12 @@
 public abstract class Character
 {
     // instance vars
-    protected static int counter = 0;
-    protected static String name = "";
-    protected static int HP;
-    protected static int str;
-    protected static int def;
-    protected static double dmg;
+    protected int counter = 0;
+    protected String name = "";
+    protected int HP;
+    protected int str;
+    protected int def;
+    protected double dmg;
    
     //returns boolean indicating living or dead when
     //true when HP is over 0, else false
