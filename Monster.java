@@ -14,9 +14,24 @@ public class Monster extends Character
 	dmg = 1.0;
     }
 
-    public String toString()
+     public void specialize()
     {
-	return "Monster Class:\n" + about();
+	def -= 0;
+	dmg += 0;
+	counter += 0;
+    }
+
+    public void normalize()
+    {
+	def += 0*counter;
+	dmg -= 0*counter;
+    }
+    
+    //about
+    //couldn't override the about() in Character if it's static
+    public String about()
+    {
+	return "Monster Class:\n" + "Name: " + name + "\n HP: " + HP + "\n Strength: " + str + "\n Defense: " + def + "\n Attack Rating: " + dmg;
     } 
 
 }
