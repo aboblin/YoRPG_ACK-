@@ -1,7 +1,7 @@
 // Team ACK!! -- Brian Kwong, Elaina Chung, Adrian Boylan
 // APCS1 pd1
-// HW32 -- Ye Olde Role Playing Game, Expanded
-// 2016-11-20
+// HW34 -- Ye Olde Role Playing Game, Unchained 
+// 2016-11-22
 
 public class Rouge extends Character 
 {  
@@ -9,10 +9,10 @@ public class Rouge extends Character
     public Rouge(String n)
     {
 	name = n;
-	HP = 115;
-	str = 70;
-	def = 35;
-	dmg = 0.5;
+	HP = 1150;
+	str = 700;
+	def = 350;
+	dmg = 0.6;
     }
 
     public String toString()

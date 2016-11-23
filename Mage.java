@@ -1,7 +1,7 @@
 // Team ACK!! -- Brian Kwong, Elaina Chung, Adrian Boylan
 // APCS1 pd1
-// HW32 -- Ye Olde Role Playing Game, Expanded
-// 2016-11-20
+// HW34 -- Ye Olde Role Playing Game, Unchained 
+// 2016-11-22
 
 public class Mage extends Character 
 {  
@@ -9,9 +9,9 @@ public class Mage extends Character
     public Mage(String n)
     {
 	name = n;
-	HP = 100;
-	str = 50;
-	def = 30;
+	HP = 1200;
+	str = 400;
+	def = 500;
 	dmg = 0.7;
     }
 

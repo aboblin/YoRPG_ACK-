@@ -1,7 +1,7 @@
 // Team ACK!! -- Brian Kwong, Elaina Chung, Adrian Boylan
 // APCS1 pd1
-// HW32 -- Ye Olde Role Playing Game, Expanded
-// 2016-11-20
+// HW34 -- Ye Olde Role Playing Game, Unchained 
+// 2016-11-22
 
 public class Peasant extends Character 
 {  
@@ -9,9 +9,9 @@ public class Peasant extends Character
     public Peasant(String n)
     {
 	name = n;
-	HP = 90;
-	str = 20;
-	def = 10;
+	HP = 800;
+	str = 100;
+	def = 100;
 	dmg = 0.2;
     }
 

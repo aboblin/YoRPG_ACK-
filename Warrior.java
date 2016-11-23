@@ -1,7 +1,7 @@
-/* Team ACK!! -- Brian Kwong, Elaina Chung, Adrian Boylan
-   APCS1 pd01
-   HW#32 -- Your Own Rocket-Propelled Grenade Expanded 
-   2016-11-20 */
+// Team ACK!! -- Brian Kwong, Elaina Chung, Adrian Boylan
+// APCS1 pd1
+// HW34 -- Ye Olde Role Playing Game, Unchained 
+// 2016-11-22
 
 public class Warrior extends Character 
 {      
@@ -9,10 +9,10 @@ public class Warrior extends Character
     public Warrior(String n)
     {
 	name = n;
-	HP = 125;
-	str = 100;
-	def = 40;
-	dmg = 0.4;
+	HP = 1300;
+	str = 1000;
+	def = 400;
+	dmg = 0.5;
     }
 
     public String toString()
