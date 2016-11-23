@@ -57,6 +57,7 @@ public class YoRPG
     {
 	String s;
 	String name = "";
+	String decision = "2";
 	s = "~~~ Welcome to Ye Olde RPG! ~~~\n";
 
 	s += "\nChoose your difficulty: \n";
@@ -71,49 +72,70 @@ public class YoRPG
 	}
 	catch ( IOException e ) { }
 
-	s = "Weary traveler, what might you be?\n";
-	s += "\t1: Warrior\n";
-	s += "\t2: Mage\n";
-	s += "\t3: Rouge\n";
-    s += "\t4: Archer\n";
-    s += "\t5: Peasant\n";
-	s += "Selection: ";
-	System.out.print(s);
+	while (decision.equals("2")) {
+	    s = "Weary traveler, what might you be?\n";
+	    s += "\t1: Warrior\n";
+	    s += "\t2: Mage\n";
+	    s += "\t3: Rouge\n";
+	    s += "\t4: Archer\n";
+	    s += "\t5: Peasant\n";
+	    s += "Selection: ";
+	    System.out.print(s);
 
-	try {
-	    classification = Integer.parseInt( in.readLine() );
-	}
-	catch ( IOException e ) { }
+	    try {
+		classification = Integer.parseInt( in.readLine() );
+	    }
+	    catch ( IOException e ) { }
 	
-	s = "And, what doth thy call thyself? (State your name): ";
-	System.out.print( s );
+	    s = "And, what doth thy call thyself? (State your name): ";
+	    System.out.print( s );
 
-	try {
-	    name = in.readLine();
+	    try {
+		name = in.readLine();
+	    }
+	    catch ( IOException e ) { }
+	
+	    String t = "";
+
+	    if (classification == 1){
+		pat = new Warrior( name );
+		t = "Warrior";
+	    }
+
+	    if (classification == 2){
+		pat = new Mage( name );
+		t = "Mage";
+	    }
+
+	    if (classification == 3){
+		pat = new Rouge( name );
+		t = "Rouge";
+	    }
+
+	    if (classification == 4){
+		pat = new Archer( name );
+		t = "Archer";
+	    }
+
+	    if (classification == 5){
+		pat = new Peasant( name );
+		t = "Peasant";
+	    }
+
+	    System.out.println(pat.about());
+
+	    s = "Does thou wish to continue as a " + t + "?\n";
+	    s += "\t1: Indeed.\n";
+	    s += "\t2: Nay.\n";
+
+	    System.out.println(s);
+
+	    try {
+		decision = in.readLine();
+	    }
+	    catch ( IOException e ) { }
+
 	}
-	catch ( IOException e ) { }
-
-	if (classification == 1){
-	    pat = new Warrior( name );
-	}
-
-	if (classification == 2){
-	    pat = new Mage( name );
-	}
-
-	if (classification == 3){
-	    pat = new Rouge( name );
-	}
-
-	if (classification == 4){
-	    pat = new Archer( name );
-	}
-
-	if (classification == 5){
-	    pat = new Peasant( name );
-	}
-
-	System.out.println(pat.about());
 
     }//end newGame()
 
