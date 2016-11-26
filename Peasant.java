@@ -14,6 +14,22 @@ public class Peasant extends Character
 	def = 100;
 	dmg = 0.2;
     }
+
+    //heals the person by a quarter of their max HP
+    public void heal()
+    {
+	if(potions <= 0){
+	    System.out.println("Out of potions. :(");
+	}
+	else{
+	    HP += 800/4;
+	    if(HP > 800){
+		HP = 800;
+	    }
+	    potions -= 1;
+	}
+    }
+    
      //def is decreased and dmg is increased, counter idea credits given to Ishtiaque Mahdi!
     public void specialize()
     {
@@ -27,6 +43,7 @@ public class Peasant extends Character
     {
 	def += 100*counter;
 	dmg -= 1*counter;
+	counter = 0;
     }
 
     //about

@@ -160,6 +160,19 @@ public class YoRPG
 
 	    while( smaug.isAlive() && pat.isAlive() ) {
 
+			System.out.println( "\n" + pat.getName() + " has " + pat.getHP() + "HP." );
+		System.out.println( "\n" + "Ye Olde Monster has " + smaug.getHP() + "HP." );
+		
+		try{
+		    System.out.println("\nWant to heal?");
+		    System.out.println( "\t1: Nay.\n\t2: Aye!" );
+		    i = Integer.parseInt( in.readLine() );
+		}
+		catch ( IOException e ) { }
+
+		if(i == 2)
+		    pat.heal();
+		
 		// Give user the option of using a special attack:
 		// If you land a hit, you incur greater damage,
 		// ...but if you get hit, you take more damage.
@@ -169,9 +182,6 @@ public class YoRPG
 		    i = Integer.parseInt( in.readLine() );
 		}
 		catch ( IOException e ) { }
-
-		System.out.println( "\n" + pat.getName() + " has " + pat.getHP() + "HP." );
-		System.out.println( "\n" + "Ye Olde Monster has " + smaug.getHP() + "HP." );
 
 		if ( i == 2 )
 		    pat.specialize();

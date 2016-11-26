@@ -15,6 +15,21 @@ public class Mage extends Character
 	dmg = 0.7;
     }
 
+    //heals the person by a quarter of their max HP
+    public void heal()
+    {
+	if(potions <= 0){
+	    System.out.println("Out of potions. :(");
+	}
+	else{
+	    HP += 1200/4;
+	    if(HP > 1200){
+		HP = 1200;
+	    }
+	    potions -= 1;
+	}
+    }
+    
      //def is decreased and dmg is increased, counter idea credits given to Ishtiaque Mahdi!
     public void specialize()
     {
@@ -28,6 +43,7 @@ public class Mage extends Character
     {
 	def += 300*counter;
 	dmg -= 0.8*counter;
+	counter = 0;
     }
 
     public String about()

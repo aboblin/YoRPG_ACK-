@@ -12,6 +12,7 @@ public abstract class Character
     protected int str;
     protected int def;
     protected double dmg;
+    protected int potions = 10;
    
     //returns boolean indicating living or dead when
     //true when HP is over 0, else false
@@ -52,7 +53,7 @@ public abstract class Character
 	c.lowerHP(damage);
 	return damage;
     }
-
+    public abstract void heal();
     public abstract void specialize();
     public abstract void normalize();
     public abstract String about();

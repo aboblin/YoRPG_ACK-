@@ -15,6 +15,21 @@ public class Rouge extends Character
 	dmg = 0.6;
     }
 
+    //heals the person by a quarter of their max HP
+    public void heal()
+    {
+	if(potions <= 0){
+	    System.out.println("Out of potions. :(");
+	}
+	else{
+	    HP += 1150/4;
+	    if(HP > 1150){
+		HP = 1150;
+	    }
+	    potions -= 1;
+	}
+    }
+    
      //def is decreased and dmg is increased, counter idea credits given to Ishtiaque Mahdi!
     public void specialize()
     {
@@ -28,6 +43,7 @@ public class Rouge extends Character
     {
 	def += 150*counter;
 	dmg -= 0.6*counter;
+	counter = 0;
     }
 
     //about

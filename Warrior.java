@@ -15,6 +15,21 @@ public class Warrior extends Character
 	dmg = 0.5;
     }
 
+    //heals the person by a quarter of their max HP
+    public void heal()
+    {
+	if(potions <= 0){
+	    System.out.println("Out of potions. :(");
+	}
+	else{
+	    HP += 1300/4;
+	    if(HP > 1300){
+		HP = 1300;
+	    }
+	    potions -= 1;
+	}
+    }
+    
     //def is decreased and dmg is increased, counter idea credits given to Ishtiaque Mahdi!
     public void specialize()
     {
@@ -28,6 +43,7 @@ public class Warrior extends Character
     {
 	def += 200*counter;
 	dmg -= 0.5*counter;
+	counter = 0;
     }
 
     //about
