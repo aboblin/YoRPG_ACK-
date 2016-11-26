@@ -14,7 +14,9 @@ public class Monster extends Character
 	dmg = 1.0;
     }
 
-    public void heal();
+    public void heal()
+    {
+    }
     
      public void specialize()
     {
