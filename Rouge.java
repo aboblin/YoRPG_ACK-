@@ -3,7 +3,7 @@
 // HW34 -- Ye Olde Role Playing Game, Unchained 
 // 2016-11-22
 
-public class Rouge extends Character 
+public class Rouge extends Player
 {  
     //constructor, initializes values for all the instance variables above
     public Rouge(String n)

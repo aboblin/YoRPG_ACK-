@@ -3,7 +3,7 @@
 // HW34 -- Ye Olde Role Playing Game, Unchained 
 // 2016-11-22
 
-public class Mage extends Character 
+public class Mage extends Player
 {  
     //constructor, initializes values for all the instance variables above
     public Mage(String n)

@@ -13,29 +13,12 @@ public class Monster extends Character
 	str = (int)(Math.random()*250)+400;
 	dmg = 1.0;
     }
-
-    public void heal()
-    {
-    }
-    
-     public void specialize()
-    {
-	def -= 0;
-	dmg += 0;
-	counter += 0;
-    }
-
-    public void normalize()
-    {
-	def += 0*counter;
-	dmg -= 0*counter;
-    }
     
     //about
     //couldn't override the about() in Character if it's static
     public String about()
     {
-	return "Monster Class:\n" + "Name: " + name + "\n HP: " + HP + "\n Strength: " + str + "\n Defense: " + def + "\n Attack Rating: " + dmg;
+	return "Monster Class:\n" +  "\n HP: " + HP + "\n Strength: " + str + "\n Defense: " + def + "\n Attack Rating: " + dmg;
     } 
 
 }

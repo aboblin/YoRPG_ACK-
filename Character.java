@@ -6,24 +6,16 @@
 public abstract class Character
 {
     // instance vars
-    protected int counter = 0;
-    protected String name = "";
-    protected int HP;
-    protected int str;
-    protected int def;
-    protected double dmg;
-    protected int potions = 10;
+    protected int HP; // hit points
+    protected int str; // strength
+    protected int def; // defense
+    protected double dmg; // attack rating
    
     //returns boolean indicating living or dead when
     //true when HP is over 0, else false
     public boolean isAlive() 
     {
         return (HP > 0);
-    }
-    
-    public String getName()
-    {
-        return name;
     }
 
     public int getHP()
@@ -53,11 +45,11 @@ public abstract class Character
 	c.lowerHP(damage);
 	return damage;
     }
-    public abstract void addItems(String s);
-    public abstract void heal();
-    public abstract void specialize();
-    public abstract void normalize();
-    public abstract String about();
+    // public abstract void addItems(String s);
+    // public abstract void heal();
+    // public abstract void specialize();
+    // public abstract void normalize();
+    // public abstract String about();
  
     //def is decreased and dmg is increased, counter idea credits given to Ishtiaque Mahdi!
     // public void specialize() 

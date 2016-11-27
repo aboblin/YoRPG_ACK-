@@ -3,7 +3,7 @@
 // HW34 -- Ye Olde Role Playing Game, Unchained 
 // 2016-11-22
 
-public class Warrior extends Character 
+public class Warrior extends Player
 {      
     //constructor, initializes values for all the instance variables above
     public Warrior(String n)
@@ -18,12 +18,12 @@ public class Warrior extends Character
     //heals the person by a quarter of their max HP
     public void heal()
     {
-	if(potions <= 0){
+	if (potions <= 0) {
 	    System.out.println("Out of potions. :(");
 	}
-	else{
+	else {
 	    HP += 1300/4;
-	    if(HP > 1300){
+	    if (HP > 1300 ){
 		HP = 1300;
 	    }
 	    potions -= 1;

@@ -20,7 +20,7 @@ public class YoRPG
     public final static int MAX_ENCOUNTERS = 5;
 
     //each round, a Warrior and a Monster will be instantiated...
-    private Character pat;   //Is it man or woman?
+    private Player pat;   //Is it man or woman?
     private Monster smaug; //Friendly generic monster name?
 
     private int classification;
