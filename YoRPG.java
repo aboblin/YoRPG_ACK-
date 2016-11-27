@@ -27,6 +27,8 @@ public class YoRPG
     private int moveCount;
     private boolean gameOver;
     private int difficulty;
+    private String itemName;
+    private double itemChance;
 
     private InputStreamReader isr;
     private BufferedReader in;
@@ -72,8 +74,16 @@ public class YoRPG
 	}
 	catch ( IOException e ) { }
 
+	s = "Weary traveler, what doth thy call thyself? (State your name): ";
+	System.out.print( s );
+
+	try {
+	    name = in.readLine();
+	}
+	catch ( IOException e ) { }
+
 	while (decision.equals("2")) {
-	    s = "Weary traveler, what might you be?\n";
+	    s = "Ahh! " + name + ", pray tell, what might you be?\n";
 	    s += "\t1: Warrior\n";
 	    s += "\t2: Mage\n";
 	    s += "\t3: Rouge\n";
@@ -84,14 +94,6 @@ public class YoRPG
 
 	    try {
 		classification = Integer.parseInt( in.readLine() );
-	    }
-	    catch ( IOException e ) { }
-	
-	    s = "And, what doth thy call thyself? (State your name): ";
-	    System.out.print( s );
-
-	    try {
-		name = in.readLine();
 	    }
 	    catch ( IOException e ) { }
 	
@@ -209,6 +211,40 @@ public class YoRPG
 	    //option 2: you slay the beast
 	    else if ( !smaug.isAlive() ) {
 		System.out.println( "HuzzaaH! Ye olde monster hath been slain!" );
+
+		itemChance = Math.random();
+     
+		if ( itemChance <= 0.06 ) {
+		    itemName = "Potion";
+		}
+		
+		if  ( itemChance <= 0.12 ) {
+		    itemName = "Shield";
+		}
+		
+		if  ( itemChance <= 0.18 ) {
+		    itemName = "Sword";
+		}
+		
+		if  ( itemChance <= 0.24 ) {
+		    itemName = "Wristband";
+		}
+
+		if ( itemChance <= 0.24 ){
+		    
+		    System.out.println( "Woah! The monster you hath slain dropped a " + itemName + "!" );
+		    try {
+			System.out.println( "\nWould you like to pick it up?" );
+			System.out.println( "\t1: Nay.\n\t2: Aye!" );
+			i = Integer.parseInt( in.readLine() );
+		    }
+		    catch ( IOException e ) { }
+
+		    if (i == 2) {
+			pat.addItems( itemName );
+		    }
+		}
+		
 		return true;
 	    }
 	    //option 3: the beast slays you

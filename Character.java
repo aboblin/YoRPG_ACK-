@@ -53,6 +53,7 @@ public abstract class Character
 	c.lowerHP(damage);
 	return damage;
     }
+    public abstract void addItems(String s);
     public abstract void heal();
     public abstract void specialize();
     public abstract void normalize();
