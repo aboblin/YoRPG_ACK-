@@ -26,30 +26,10 @@ public class Archer extends Player
 	    if(HP > 1000){
 		HP = 1000;
 	    }
+        System.out.println("Your HP is now " + HP + ".");
 	    potions -= 1;
 	}
     }
-
-    //method for when a monster drops an item so you can 
-    public void addItems(String item)
-    {
-	if ( item.equals("Potion") ) {
-	    potions += 1;
-		}
-        
-	if ( item.equals("Shield") ) {
-	    def += 100;
-		}
-        
-	if ( item.equals("Sword") ) {
-	    str += 100;
-		}
-        
-	if ( item.equals("Wristband") ) {
-	    dmg += 0.1;
-		}      
-    }
-	
     
      //def is decreased and dmg is increased, counter idea credits given to Ishtiaque Mahdi!
     public void specialize()

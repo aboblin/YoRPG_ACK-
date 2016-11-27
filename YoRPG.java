@@ -172,8 +172,11 @@ public class YoRPG
 		}
 		catch ( IOException e ) { }
 
-		if(i == 2)
+		if(i == 2) 
+        {
 		    pat.heal();
+            System.out.println( "\nYou have " + pat.getPotions() + " potions left.");
+        }
 		
 		// Give user the option of using a special attack:
 		// If you land a hit, you incur greater damage,
